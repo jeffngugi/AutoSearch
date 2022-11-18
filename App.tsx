@@ -1,11 +1,11 @@
 import {StyleSheet, TextInput, SafeAreaView} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import WebView from 'react-native-webview';
 
 const App = () => {
   const [searchText, setSearchText] = useState<string>('');
   // if(searchText)
-  function validURL(str) {
+  function validURL(str: string) {
     var pattern = new RegExp(
       '^(https?:\\/\\/)?' + // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -14,13 +14,9 @@ const App = () => {
         '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
         '(\\#[-a-z\\d_]*)?$',
       'i',
-    ); // fragment locator
+    );
     return !!pattern.test(str);
   }
-
-  // useEffect(() => {
-  //   validURL(searchText);
-  // }, [searchText]);
 
   return (
     <SafeAreaView style={styles.container}>
