@@ -1,5 +1,5 @@
 # AutoSearch
-A simple app that auto-searches a web when you enter a valid
+A simple app that auto-searches a web when you enter a valid url
 
 
 ### How to run this app
